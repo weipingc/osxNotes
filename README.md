@@ -11,7 +11,7 @@ Find files then grep text:
 
 (grep executes once against the output from find concatenated)
 
-This command (with -print) outputs more lines
+This command (with -print) outputs more lines b/c -print prints every found file's name, and you can know which file contains the content)
 
 > find . -name "*.gradle" -print -exec grep 'gw-gunit-build' {} \\;
 
