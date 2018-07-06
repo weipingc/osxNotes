@@ -3,13 +3,21 @@
     export PS2="| => "
   
 Find files then grep text:
->    find . -name '*.py' -exec grep 'something' {} \; > output.txt // grep executed as many times as FIND finds occurences.
->    find . -name '*.py' -exec grep 'something' {} \+ > output.txt // the output from find concatenated
+>    find . -name '*.py' -exec grep 'something' {} \\; > output.txt
+
+(grep executed as many times as FIND finds occurences.)
+
+>    find . -name '*.py' -exec grep 'something' {} \\+ > output.txt
+
+(grep executes once against the output from find concatenated)
 
 This command (with -print) outputs more lines
-> find . -name "*.gradle" -print -exec grep 'gw-gunit-build' {} \;
+
+> find . -name "*.gradle" -print -exec grep 'gw-gunit-build' {} \\;
+
 than
--> find . -name "*.gradle" -exec grep 'gw-gunit-build' {} \;
+
+-> find . -name "*.gradle" -exec grep 'gw-gunit-build' {} \\;
 
 List directories and their sizes in Mac OS X command line:
     du -hs dir
