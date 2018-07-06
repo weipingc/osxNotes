@@ -17,7 +17,7 @@ This command (with -print) outputs more lines
 
 than
 
--> find . -name "*.gradle" -exec grep 'gw-gunit-build' {} \\;
+> find . -name "*.gradle" -exec grep 'gw-gunit-build' {} \\;
 
 List directories and their sizes in Mac OS X command line:
     du -hs dir
