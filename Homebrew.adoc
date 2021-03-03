@@ -1,0 +1,5 @@
+
+----
+brew install --cask kdiff3
+brew install --cask adoptopenjdk8
+----
